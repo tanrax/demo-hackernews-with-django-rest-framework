@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from app.api.models import News
 
 
 def home(request):
-    return render(request, 'pages/list.html', {
-        'news': News.objects.all()
-    })
+    return render(request, 'pages/list.html', {})
 
 
 def add_news(request):

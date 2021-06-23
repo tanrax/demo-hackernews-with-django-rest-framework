@@ -1,0 +1,22 @@
+{
+  "name": "demo-hackernews-with-django-rest-framework",
+  "version": "1.0.0",
+  "description": "Demo use Django Rest Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanrax/demo-hackernews-with-django-rest-framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanrax/demo-hackernews-with-django-rest-framework/issues"
+  },
+  "homepage": "https://github.com/tanrax/demo-hackernews-with-django-rest-framework#readme",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}

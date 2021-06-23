@@ -1,0 +1,12 @@
+http://django.localhost:9000
+
+encode gzip zstd
+
+root * /home/andros/www/demo-hackernews-with-django-rest-framework
+
+@notStatic {
+  not path /static/* /media/*
+}
+reverse_proxy @notStatic localhost:8000
+
+file_server
