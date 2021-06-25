@@ -2,6 +2,7 @@ from app.api.models import News
 from rest_framework import viewsets, mixins
 from app.api.serializers import NewsSerializer
 from rest_framework.response import Response
+import json
 
 
 class NewsViewSet( mixins.UpdateModelMixin,
@@ -19,11 +20,11 @@ class NewsViewSet( mixins.UpdateModelMixin,
         return Response(serializer.data)
 
 
-    def put(self, request, pk=None):
+    def put(self, request):
         # Update
-        my_news = News.objects.get(pk)
+        my_news = News.objects.get(pk=request.data['id'])
         my_news.votes = my_news.votes + 1
         my_news.save()
         # Devolvemos la noticia modificada
-        serializer = News(my_news)
+        serializer = NewsSerializer(my_news)
         return Response(serializer.data)
